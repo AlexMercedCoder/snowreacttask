@@ -8,19 +8,15 @@ module.exports = {
     '@snowpack/plugin-dotenv',
     '@snowpack/plugin-sass',
   ],
-  install: [
-    /* ... */
-  ],
-  installOptions: {
+  packageOptions: {
     /* ... */
   },
   devOptions: {
-    /* ... */
+    knownEntrypoints: {
+      /* ... */
+    }
   },
   buildOptions: {
-    /* ... */
-  },
-  proxy: {
     /* ... */
   },
   alias: {

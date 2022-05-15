@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { useTaskStore } from './taskstore';
-import { Switch, Route, Link } from 'react-router-dom';
+import { Routes, Route, Link } from 'react-router-dom';
 import {
   Button,
   Container,
@@ -76,11 +76,11 @@ function App() {
             </Modal>
           </Card>
         </FlexContainer>
-        <Switch>
-          <Route exact path="/" render={(rp) => <h1>Home</h1>} />
-          <Route exact path="/other" render={(rp) => <h1>Other</h1>} />
-          <Route exact path="/another" render={(rp) => <h1>Another</h1>} />
-        </Switch>
+        <Routes>
+          <Route exact path="/" element={<h1>Home</h1>} />
+          <Route exact path="/other" element={<h1>Other</h1>} />
+          <Route exact path="/another" element={<h1>Another</h1>} />
+        </Routes>
         <Link to="/">
           <Button label="Home" />
         </Link>

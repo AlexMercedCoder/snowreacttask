@@ -1,11 +1,12 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
+import { createRoot } from 'react-dom/client';
 import App from './App.jsx';
 import { BrowserRouter as Router } from 'react-router-dom';
 import { TaskStore } from './taskstore';
 import './index.scss';
 
-ReactDOM.render(
+const root = createRoot(document.getElementById('root'));
+root.render(
   <Router>
     <TaskStore>
       <React.StrictMode>
@@ -13,7 +14,6 @@ ReactDOM.render(
       </React.StrictMode>
     </TaskStore>
   </Router>,
-  document.getElementById('root'),
 );
 
 // Hot Module Replacement (HMR) - Remove this snippet to remove HMR.
